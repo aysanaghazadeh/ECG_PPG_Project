@@ -1,0 +1,33 @@
+
+  0%|          | 0/1000 [00:18<?, ?it/s]
+Traceback (most recent call last):
+  File "/Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/main.py", line 11, in <module>
+    train.train(train_loader, test_loader)
+  File "/Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/src/train.py", line 57, in train
+    return self.trains[self.config.model] \
+  File "/Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/src/train.py", line 23, in train
+    for (i, (ecg, label)) in enumerate(train_loader):
+  File "/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 633, in __next__
+    data = self._next_data()
+  File "/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1345, in _next_data
+    return self._process_data(data)
+  File "/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1371, in _process_data
+    data.reraise()
+  File "/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/lib/python3.9/site-packages/torch/_utils.py", line 644, in reraise
+    raise exception
+ValueError: Caught ValueError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/lib/python3.9/site-packages/torch/utils/data/_utils/worker.py", line 308, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 51, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/src/dataset.py", line 15, in __getitem__
+    x = np.sum(x, axis=1)
+  File "<__array_function__ internals>", line 200, in sum
+  File "/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/lib/python3.9/site-packages/numpy/core/fromnumeric.py", line 2324, in sum
+    return _wrapreduction(a, np.add, 'sum', axis, dtype, out, keepdims=keepdims,
+  File "/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/lib/python3.9/site-packages/numpy/core/fromnumeric.py", line 86, in _wrapreduction
+    return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+ValueError: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (2,) + inhomogeneous part.

@@ -1,0 +1,10 @@
+
+1686258011.414953
+Traceback (most recent call last):
+  File "/Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/main.py", line 11, in <module>
+    train.train(train_loader, test_loader)
+  File "/Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/src/train.py", line 56, in train
+    return self.trains[self.config.model] \
+  File "/Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/src/train.py", line 20, in train
+    for epoch in tqdm(range(self.epochs)):
+TypeError: 'module' object is not callable

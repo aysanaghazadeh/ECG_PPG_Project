@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/main.py", line 2, in <module>
+    from src.model import Model
+  File "/Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/src/model.py", line 3, in <module>
+    from config import Config
+ModuleNotFoundError: No module named 'config'

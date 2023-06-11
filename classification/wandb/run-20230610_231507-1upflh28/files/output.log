@@ -1,0 +1,27 @@
+
+  0%|          | 0/1000 [00:23<?, ?it/s]
+Traceback (most recent call last):
+  File "/Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/main.py", line 11, in <module>
+    train.train(train_loader, test_loader)
+  File "/Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/src/train.py", line 58, in train
+    return self.trains[self.config.model] \
+  File "/Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/src/train.py", line 24, in train
+    for (i, (ecg, label)) in enumerate(train_loader):
+  File "/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 441, in __iter__
+    return self._get_iterator()
+  File "/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 388, in _get_iterator
+    return _MultiProcessingDataLoaderIter(self)
+  File "/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1042, in __init__
+    w.start()
+  File "/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/lib/python3.9/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/lib/python3.9/multiprocessing/context.py", line 224, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+  File "/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/lib/python3.9/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/lib/python3.9/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/lib/python3.9/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/lib/python3.9/multiprocessing/popen_spawn_posix.py", line 62, in _launch
+    f.write(fp.getbuffer())

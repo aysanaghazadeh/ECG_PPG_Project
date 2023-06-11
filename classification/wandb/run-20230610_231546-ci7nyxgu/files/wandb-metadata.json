@@ -1,0 +1,36 @@
+{
+    "os": "macOS-10.16-x86_64-i386-64bit",
+    "python": "3.9.16",
+    "heartbeatAt": "2023-06-11T03:15:47.300052",
+    "startedAt": "2023-06-11T03:15:46.673781",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/main.py",
+    "codePath": "main.py",
+    "host": "Aysans-MacBook-Pro-2.local",
+    "username": "aysanaghazadeh",
+    "executable": "/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 2400,
+        "min": 2400,
+        "max": 2400
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2400,
+            "min": 2400,
+            "max": 2400
+        }
+    ],
+    "disk": {
+        "total": 460.4317207336426,
+        "used": 11.979625701904297
+    },
+    "memory": {
+        "total": 16.0
+    }
+}

@@ -1,0 +1,27 @@
+
+  0%|          | 0/1000 [01:45<?, ?it/s]
+Traceback (most recent call last):
+  File "/Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/main.py", line 11, in <module>
+    train.train(train_loader, test_loader)
+  File "/Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/src/train.py", line 57, in train
+    return self.trains[self.config.model] \
+  File "/Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/src/train.py", line 23, in train
+    for (i, (ecg, label)) in enumerate(train_loader):
+  File "/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 633, in __next__
+    data = self._next_data()
+  File "/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1328, in _next_data
+    idx, data = self._get_data()
+  File "/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1294, in _get_data
+    success, data = self._try_get_data()
+  File "/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1132, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/lib/python3.9/multiprocessing/queues.py", line 113, in get
+    if not self._poll(timeout):
+  File "/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/lib/python3.9/multiprocessing/connection.py", line 257, in poll
+    return self._poll(timeout)
+  File "/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/lib/python3.9/multiprocessing/connection.py", line 424, in _poll
+    r = wait([self], timeout)
+  File "/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/lib/python3.9/multiprocessing/connection.py", line 931, in wait
+    ready = selector.select(timeout)
+  File "/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/lib/python3.9/selectors.py", line 416, in select
+    fd_event_list = self._selector.poll(timeout)

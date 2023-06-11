@@ -1,0 +1,36 @@
+
+  0%|          | 0/1000 [01:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/Applications/PyCharm.app/Contents/plugins/python/helpers/pydev/pydevd.py", line 1483, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/Applications/PyCharm.app/Contents/plugins/python/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/main.py", line 11, in <module>
+    train.train(train_loader, test_loader)
+  File "/Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/src/train.py", line 58, in train
+    return self.trains[self.config.model] \
+  File "/Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/src/train.py", line 26, in train
+    prediction = model(ecg)
+  File "/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/src/model.py", line 16, in forward
+    return self.model(x)
+  File "/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/src/unet.py", line 100, in forward
+    encoder_outputs = self.encoder(x)
+  File "/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/src/unet.py", line 46, in forward
+    x = block(x)
+  File "/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/src/unet.py", line 18, in forward
+    conv1_output = self.LayerNorm(conv1_output)
+  File "/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/lib/python3.9/site-packages/torch/nn/modules/normalization.py", line 190, in forward
+    return F.layer_norm(
+  File "/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/lib/python3.9/site-packages/torch/nn/functional.py", line 2515, in layer_norm
+    return torch.layer_norm(input, normalized_shape, weight, bias, eps, torch.backends.cudnn.enabled)
+RuntimeError: Given normalized_shape=[64], expected input with shape [*, 64], but got input of size[8, 64, 1000]

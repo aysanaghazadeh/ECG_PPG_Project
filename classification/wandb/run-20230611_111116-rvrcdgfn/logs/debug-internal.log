@@ -1,0 +1,197 @@
+2023-06-11 11:11:16,779 INFO    StreamThr :73585 [internal.py:wandb_internal():86] W&B internal server running at pid: 73585, started at: 2023-06-11 11:11:16.779061
+2023-06-11 11:11:16,780 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: status
+2023-06-11 11:11:16,785 INFO    WriterThread:73585 [datastore.py:open_for_write():85] open: /Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/wandb/run-20230611_111116-rvrcdgfn/run-rvrcdgfn.wandb
+2023-06-11 11:11:16,785 DEBUG   SenderThread:73585 [sender.py:send():375] send: header
+2023-06-11 11:11:16,786 DEBUG   SenderThread:73585 [sender.py:send():375] send: run
+2023-06-11 11:11:17,052 INFO    SenderThread:73585 [dir_watcher.py:__init__():219] watching files in: /Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/wandb/run-20230611_111116-rvrcdgfn/files
+2023-06-11 11:11:17,052 INFO    SenderThread:73585 [sender.py:_start_run_threads():1124] run started: rvrcdgfn with start time 1686496276.779485
+2023-06-11 11:11:17,052 DEBUG   SenderThread:73585 [sender.py:send_request():402] send_request: summary_record
+2023-06-11 11:11:17,052 INFO    SenderThread:73585 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-06-11 11:11:17,054 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: check_version
+2023-06-11 11:11:17,055 DEBUG   SenderThread:73585 [sender.py:send_request():402] send_request: check_version
+2023-06-11 11:11:17,187 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: run_start
+2023-06-11 11:11:17,200 DEBUG   HandlerThread:73585 [system_info.py:__init__():31] System info init
+2023-06-11 11:11:17,201 DEBUG   HandlerThread:73585 [system_info.py:__init__():46] System info init done
+2023-06-11 11:11:17,201 INFO    HandlerThread:73585 [system_monitor.py:start():181] Starting system monitor
+2023-06-11 11:11:17,201 INFO    SystemMonitor:73585 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-06-11 11:11:17,201 INFO    HandlerThread:73585 [system_monitor.py:probe():201] Collecting system info
+2023-06-11 11:11:17,202 INFO    SystemMonitor:73585 [interfaces.py:start():190] Started cpu monitoring
+2023-06-11 11:11:17,202 DEBUG   HandlerThread:73585 [system_info.py:probe():195] Probing system
+2023-06-11 11:11:17,202 INFO    SystemMonitor:73585 [interfaces.py:start():190] Started disk monitoring
+2023-06-11 11:11:17,202 INFO    SystemMonitor:73585 [interfaces.py:start():190] Started memory monitoring
+2023-06-11 11:11:17,203 INFO    SystemMonitor:73585 [interfaces.py:start():190] Started network monitoring
+2023-06-11 11:11:17,213 DEBUG   HandlerThread:73585 [git.py:repo():40] git repository is invalid
+2023-06-11 11:11:17,214 DEBUG   HandlerThread:73585 [system_info.py:probe():240] Probing system done
+2023-06-11 11:11:17,214 DEBUG   HandlerThread:73585 [system_monitor.py:probe():210] {'os': 'macOS-10.16-x86_64-i386-64bit', 'python': '3.9.16', 'heartbeatAt': '2023-06-11T15:11:17.202364', 'startedAt': '2023-06-11T15:11:16.769987', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/main.py', 'codePath': 'main.py', 'host': 'Aysans-MacBook-Pro-2.local', 'username': 'aysanaghazadeh', 'executable': '/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/bin/python', 'cpu_count': 8, 'cpu_count_logical': 8, 'cpu_freq': {'current': 2400, 'min': 2400, 'max': 2400}, 'cpu_freq_per_core': [{'current': 2400, 'min': 2400, 'max': 2400}], 'disk': {'total': 460.4317207336426, 'used': 11.979625701904297}, 'memory': {'total': 16.0}}
+2023-06-11 11:11:17,214 INFO    HandlerThread:73585 [system_monitor.py:probe():211] Finished collecting system info
+2023-06-11 11:11:17,214 INFO    HandlerThread:73585 [system_monitor.py:probe():214] Publishing system info
+2023-06-11 11:11:17,214 DEBUG   HandlerThread:73585 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-06-11 11:11:17,214 DEBUG   HandlerThread:73585 [system_info.py:_save_pip():67] Saving pip packages done
+2023-06-11 11:11:17,214 DEBUG   HandlerThread:73585 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-06-11 11:11:18,057 INFO    Thread-12 :73585 [dir_watcher.py:_on_file_created():278] file/dir created: /Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/wandb/run-20230611_111116-rvrcdgfn/files/wandb-summary.json
+2023-06-11 11:11:18,057 INFO    Thread-12 :73585 [dir_watcher.py:_on_file_created():278] file/dir created: /Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/wandb/run-20230611_111116-rvrcdgfn/files/requirements.txt
+2023-06-11 11:11:18,057 INFO    Thread-12 :73585 [dir_watcher.py:_on_file_created():278] file/dir created: /Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/wandb/run-20230611_111116-rvrcdgfn/files/conda-environment.yaml
+2023-06-11 11:11:18,681 DEBUG   HandlerThread:73585 [system_info.py:_save_conda():86] Saving conda packages done
+2023-06-11 11:11:18,682 INFO    HandlerThread:73585 [system_monitor.py:probe():216] Finished publishing system info
+2023-06-11 11:11:18,684 DEBUG   SenderThread:73585 [sender.py:send():375] send: files
+2023-06-11 11:11:18,684 INFO    SenderThread:73585 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-06-11 11:11:18,689 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: stop_status
+2023-06-11 11:11:18,689 DEBUG   SenderThread:73585 [sender.py:send():375] send: telemetry
+2023-06-11 11:11:18,689 DEBUG   SenderThread:73585 [sender.py:send_request():402] send_request: stop_status
+2023-06-11 11:11:19,058 INFO    Thread-12 :73585 [dir_watcher.py:_on_file_modified():295] file/dir modified: /Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/wandb/run-20230611_111116-rvrcdgfn/files/conda-environment.yaml
+2023-06-11 11:11:19,058 INFO    Thread-12 :73585 [dir_watcher.py:_on_file_created():278] file/dir created: /Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/wandb/run-20230611_111116-rvrcdgfn/files/wandb-metadata.json
+2023-06-11 11:11:19,136 INFO    wandb-upload_0:73585 [upload_job.py:push():137] Uploaded file /var/folders/1t/6l04b1413h7_m7f246431wmc0000gn/T/tmptc3ce1odwandb/lsokdds2-wandb-metadata.json
+2023-06-11 11:11:20,059 INFO    Thread-12 :73585 [dir_watcher.py:_on_file_created():278] file/dir created: /Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/wandb/run-20230611_111116-rvrcdgfn/files/output.log
+2023-06-11 11:11:22,068 INFO    Thread-12 :73585 [dir_watcher.py:_on_file_modified():295] file/dir modified: /Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/wandb/run-20230611_111116-rvrcdgfn/files/output.log
+2023-06-11 11:11:22,192 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: status_report
+2023-06-11 11:11:27,210 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: status_report
+2023-06-11 11:11:32,232 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: status_report
+2023-06-11 11:11:33,694 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: stop_status
+2023-06-11 11:11:33,694 DEBUG   SenderThread:73585 [sender.py:send_request():402] send_request: stop_status
+2023-06-11 11:11:37,792 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: status_report
+2023-06-11 11:11:42,810 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: status_report
+2023-06-11 11:11:47,834 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: status_report
+2023-06-11 11:11:48,164 INFO    Thread-12 :73585 [dir_watcher.py:_on_file_modified():295] file/dir modified: /Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/wandb/run-20230611_111116-rvrcdgfn/files/config.yaml
+2023-06-11 11:11:48,698 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: stop_status
+2023-06-11 11:11:48,698 DEBUG   SenderThread:73585 [sender.py:send_request():402] send_request: stop_status
+2023-06-11 11:11:53,796 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: status_report
+2023-06-11 11:11:58,808 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: status_report
+2023-06-11 11:12:03,701 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: stop_status
+2023-06-11 11:12:03,702 DEBUG   SenderThread:73585 [sender.py:send_request():402] send_request: stop_status
+2023-06-11 11:12:04,785 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: status_report
+2023-06-11 11:12:09,807 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: status_report
+2023-06-11 11:12:14,822 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: status_report
+2023-06-11 11:12:17,208 DEBUG   SystemMonitor:73585 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-06-11 11:12:17,209 DEBUG   SenderThread:73585 [sender.py:send():375] send: stats
+2023-06-11 11:12:17,415 DEBUG   SenderThread:73585 [sender.py:send():375] send: exit
+2023-06-11 11:12:17,415 INFO    SenderThread:73585 [sender.py:send_exit():598] handling exit code: 1
+2023-06-11 11:12:17,415 INFO    SenderThread:73585 [sender.py:send_exit():600] handling runtime: 60
+2023-06-11 11:12:17,416 INFO    SenderThread:73585 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-06-11 11:12:17,416 INFO    SenderThread:73585 [sender.py:send_exit():606] send defer
+2023-06-11 11:12:17,416 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: defer
+2023-06-11 11:12:17,416 INFO    HandlerThread:73585 [handler.py:handle_request_defer():170] handle defer: 0
+2023-06-11 11:12:17,416 DEBUG   SenderThread:73585 [sender.py:send_request():402] send_request: defer
+2023-06-11 11:12:17,416 INFO    SenderThread:73585 [sender.py:send_request_defer():622] handle sender defer: 0
+2023-06-11 11:12:17,416 INFO    SenderThread:73585 [sender.py:transition_state():626] send defer: 1
+2023-06-11 11:12:17,417 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: defer
+2023-06-11 11:12:17,417 INFO    HandlerThread:73585 [handler.py:handle_request_defer():170] handle defer: 1
+2023-06-11 11:12:17,417 DEBUG   SenderThread:73585 [sender.py:send_request():402] send_request: defer
+2023-06-11 11:12:17,417 INFO    SenderThread:73585 [sender.py:send_request_defer():622] handle sender defer: 1
+2023-06-11 11:12:17,417 INFO    SenderThread:73585 [sender.py:transition_state():626] send defer: 2
+2023-06-11 11:12:17,417 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: defer
+2023-06-11 11:12:17,417 INFO    HandlerThread:73585 [handler.py:handle_request_defer():170] handle defer: 2
+2023-06-11 11:12:17,417 INFO    HandlerThread:73585 [system_monitor.py:finish():190] Stopping system monitor
+2023-06-11 11:12:17,417 DEBUG   SystemMonitor:73585 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-06-11 11:12:17,417 INFO    HandlerThread:73585 [interfaces.py:finish():202] Joined cpu monitor
+2023-06-11 11:12:17,417 DEBUG   SystemMonitor:73585 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-06-11 11:12:17,418 INFO    HandlerThread:73585 [interfaces.py:finish():202] Joined disk monitor
+2023-06-11 11:12:17,418 INFO    HandlerThread:73585 [interfaces.py:finish():202] Joined memory monitor
+2023-06-11 11:12:17,418 INFO    HandlerThread:73585 [interfaces.py:finish():202] Joined network monitor
+2023-06-11 11:12:17,418 DEBUG   SenderThread:73585 [sender.py:send_request():402] send_request: defer
+2023-06-11 11:12:17,418 INFO    SenderThread:73585 [sender.py:send_request_defer():622] handle sender defer: 2
+2023-06-11 11:12:17,418 INFO    SenderThread:73585 [sender.py:transition_state():626] send defer: 3
+2023-06-11 11:12:17,419 DEBUG   SenderThread:73585 [sender.py:send():375] send: stats
+2023-06-11 11:12:17,419 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: defer
+2023-06-11 11:12:17,419 INFO    HandlerThread:73585 [handler.py:handle_request_defer():170] handle defer: 3
+2023-06-11 11:12:17,419 DEBUG   SenderThread:73585 [sender.py:send_request():402] send_request: defer
+2023-06-11 11:12:17,419 INFO    SenderThread:73585 [sender.py:send_request_defer():622] handle sender defer: 3
+2023-06-11 11:12:17,419 INFO    SenderThread:73585 [sender.py:transition_state():626] send defer: 4
+2023-06-11 11:12:17,419 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: defer
+2023-06-11 11:12:17,419 INFO    HandlerThread:73585 [handler.py:handle_request_defer():170] handle defer: 4
+2023-06-11 11:12:17,419 DEBUG   SenderThread:73585 [sender.py:send_request():402] send_request: defer
+2023-06-11 11:12:17,419 INFO    SenderThread:73585 [sender.py:send_request_defer():622] handle sender defer: 4
+2023-06-11 11:12:17,419 INFO    SenderThread:73585 [sender.py:transition_state():626] send defer: 5
+2023-06-11 11:12:17,420 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: defer
+2023-06-11 11:12:17,420 INFO    HandlerThread:73585 [handler.py:handle_request_defer():170] handle defer: 5
+2023-06-11 11:12:17,420 DEBUG   SenderThread:73585 [sender.py:send():375] send: summary
+2023-06-11 11:12:17,420 INFO    SenderThread:73585 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-06-11 11:12:17,420 DEBUG   SenderThread:73585 [sender.py:send_request():402] send_request: defer
+2023-06-11 11:12:17,420 INFO    SenderThread:73585 [sender.py:send_request_defer():622] handle sender defer: 5
+2023-06-11 11:12:17,420 INFO    SenderThread:73585 [sender.py:transition_state():626] send defer: 6
+2023-06-11 11:12:17,420 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: defer
+2023-06-11 11:12:17,420 INFO    HandlerThread:73585 [handler.py:handle_request_defer():170] handle defer: 6
+2023-06-11 11:12:17,421 DEBUG   SenderThread:73585 [sender.py:send_request():402] send_request: defer
+2023-06-11 11:12:17,421 INFO    SenderThread:73585 [sender.py:send_request_defer():622] handle sender defer: 6
+2023-06-11 11:12:17,421 INFO    SenderThread:73585 [sender.py:transition_state():626] send defer: 7
+2023-06-11 11:12:17,421 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: status_report
+2023-06-11 11:12:17,421 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: defer
+2023-06-11 11:12:17,421 INFO    HandlerThread:73585 [handler.py:handle_request_defer():170] handle defer: 7
+2023-06-11 11:12:17,421 DEBUG   SenderThread:73585 [sender.py:send_request():402] send_request: defer
+2023-06-11 11:12:17,421 INFO    SenderThread:73585 [sender.py:send_request_defer():622] handle sender defer: 7
+2023-06-11 11:12:18,289 INFO    Thread-12 :73585 [dir_watcher.py:_on_file_modified():295] file/dir modified: /Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/wandb/run-20230611_111116-rvrcdgfn/files/wandb-summary.json
+2023-06-11 11:12:18,420 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: poll_exit
+2023-06-11 11:12:19,313 INFO    SenderThread:73585 [sender.py:transition_state():626] send defer: 8
+2023-06-11 11:12:19,313 DEBUG   SenderThread:73585 [sender.py:send_request():402] send_request: poll_exit
+2023-06-11 11:12:19,313 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: defer
+2023-06-11 11:12:19,313 INFO    HandlerThread:73585 [handler.py:handle_request_defer():170] handle defer: 8
+2023-06-11 11:12:19,313 DEBUG   SenderThread:73585 [sender.py:send_request():402] send_request: defer
+2023-06-11 11:12:19,313 INFO    SenderThread:73585 [sender.py:send_request_defer():622] handle sender defer: 8
+2023-06-11 11:12:19,314 INFO    SenderThread:73585 [sender.py:transition_state():626] send defer: 9
+2023-06-11 11:12:19,314 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: defer
+2023-06-11 11:12:19,314 INFO    HandlerThread:73585 [handler.py:handle_request_defer():170] handle defer: 9
+2023-06-11 11:12:19,315 DEBUG   SenderThread:73585 [sender.py:send_request():402] send_request: defer
+2023-06-11 11:12:19,315 INFO    SenderThread:73585 [sender.py:send_request_defer():622] handle sender defer: 9
+2023-06-11 11:12:19,315 INFO    SenderThread:73585 [dir_watcher.py:finish():365] shutting down directory watcher
+2023-06-11 11:12:19,425 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: poll_exit
+2023-06-11 11:12:20,295 INFO    SenderThread:73585 [dir_watcher.py:_on_file_modified():295] file/dir modified: /Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/wandb/run-20230611_111116-rvrcdgfn/files/output.log
+2023-06-11 11:12:20,296 INFO    SenderThread:73585 [dir_watcher.py:finish():395] scan: /Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/wandb/run-20230611_111116-rvrcdgfn/files
+2023-06-11 11:12:20,296 INFO    SenderThread:73585 [dir_watcher.py:finish():409] scan save: /Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/wandb/run-20230611_111116-rvrcdgfn/files/requirements.txt requirements.txt
+2023-06-11 11:12:20,296 INFO    SenderThread:73585 [dir_watcher.py:finish():409] scan save: /Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/wandb/run-20230611_111116-rvrcdgfn/files/output.log output.log
+2023-06-11 11:12:20,299 INFO    SenderThread:73585 [dir_watcher.py:finish():409] scan save: /Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/wandb/run-20230611_111116-rvrcdgfn/files/config.yaml config.yaml
+2023-06-11 11:12:20,299 INFO    SenderThread:73585 [dir_watcher.py:finish():409] scan save: /Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/wandb/run-20230611_111116-rvrcdgfn/files/wandb-summary.json wandb-summary.json
+2023-06-11 11:12:20,304 INFO    SenderThread:73585 [dir_watcher.py:finish():409] scan save: /Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/wandb/run-20230611_111116-rvrcdgfn/files/conda-environment.yaml conda-environment.yaml
+2023-06-11 11:12:20,308 INFO    SenderThread:73585 [dir_watcher.py:finish():409] scan save: /Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/wandb/run-20230611_111116-rvrcdgfn/files/wandb-metadata.json wandb-metadata.json
+2023-06-11 11:12:20,308 INFO    SenderThread:73585 [sender.py:transition_state():626] send defer: 10
+2023-06-11 11:12:20,308 DEBUG   SenderThread:73585 [sender.py:send_request():402] send_request: poll_exit
+2023-06-11 11:12:20,309 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: defer
+2023-06-11 11:12:20,309 INFO    HandlerThread:73585 [handler.py:handle_request_defer():170] handle defer: 10
+2023-06-11 11:12:20,310 DEBUG   SenderThread:73585 [sender.py:send_request():402] send_request: defer
+2023-06-11 11:12:20,313 INFO    SenderThread:73585 [sender.py:send_request_defer():622] handle sender defer: 10
+2023-06-11 11:12:20,313 INFO    SenderThread:73585 [file_pusher.py:finish():167] shutting down file pusher
+2023-06-11 11:12:20,426 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: poll_exit
+2023-06-11 11:12:20,427 DEBUG   SenderThread:73585 [sender.py:send_request():402] send_request: poll_exit
+2023-06-11 11:12:20,655 INFO    wandb-upload_0:73585 [upload_job.py:push():137] Uploaded file /Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/wandb/run-20230611_111116-rvrcdgfn/files/requirements.txt
+2023-06-11 11:12:20,766 INFO    wandb-upload_1:73585 [upload_job.py:push():137] Uploaded file /Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/wandb/run-20230611_111116-rvrcdgfn/files/output.log
+2023-06-11 11:12:20,775 INFO    wandb-upload_3:73585 [upload_job.py:push():137] Uploaded file /Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/wandb/run-20230611_111116-rvrcdgfn/files/wandb-summary.json
+2023-06-11 11:12:20,784 INFO    wandb-upload_4:73585 [upload_job.py:push():137] Uploaded file /Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/wandb/run-20230611_111116-rvrcdgfn/files/conda-environment.yaml
+2023-06-11 11:12:20,791 INFO    wandb-upload_2:73585 [upload_job.py:push():137] Uploaded file /Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/wandb/run-20230611_111116-rvrcdgfn/files/config.yaml
+2023-06-11 11:12:20,996 INFO    Thread-11 :73585 [sender.py:transition_state():626] send defer: 11
+2023-06-11 11:12:20,996 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: defer
+2023-06-11 11:12:20,996 INFO    HandlerThread:73585 [handler.py:handle_request_defer():170] handle defer: 11
+2023-06-11 11:12:20,996 DEBUG   SenderThread:73585 [sender.py:send_request():402] send_request: defer
+2023-06-11 11:12:20,996 INFO    SenderThread:73585 [sender.py:send_request_defer():622] handle sender defer: 11
+2023-06-11 11:12:20,996 INFO    SenderThread:73585 [file_pusher.py:join():172] waiting for file pusher
+2023-06-11 11:12:20,996 INFO    SenderThread:73585 [sender.py:transition_state():626] send defer: 12
+2023-06-11 11:12:20,996 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: defer
+2023-06-11 11:12:20,996 INFO    HandlerThread:73585 [handler.py:handle_request_defer():170] handle defer: 12
+2023-06-11 11:12:20,997 DEBUG   SenderThread:73585 [sender.py:send_request():402] send_request: defer
+2023-06-11 11:12:20,997 INFO    SenderThread:73585 [sender.py:send_request_defer():622] handle sender defer: 12
+2023-06-11 11:12:21,294 INFO    SenderThread:73585 [sender.py:transition_state():626] send defer: 13
+2023-06-11 11:12:21,294 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: defer
+2023-06-11 11:12:21,294 INFO    HandlerThread:73585 [handler.py:handle_request_defer():170] handle defer: 13
+2023-06-11 11:12:21,295 DEBUG   SenderThread:73585 [sender.py:send_request():402] send_request: defer
+2023-06-11 11:12:21,295 INFO    SenderThread:73585 [sender.py:send_request_defer():622] handle sender defer: 13
+2023-06-11 11:12:21,295 INFO    SenderThread:73585 [sender.py:transition_state():626] send defer: 14
+2023-06-11 11:12:21,295 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: defer
+2023-06-11 11:12:21,295 INFO    HandlerThread:73585 [handler.py:handle_request_defer():170] handle defer: 14
+2023-06-11 11:12:21,295 DEBUG   SenderThread:73585 [sender.py:send():375] send: final
+2023-06-11 11:12:21,295 DEBUG   SenderThread:73585 [sender.py:send():375] send: footer
+2023-06-11 11:12:21,295 DEBUG   SenderThread:73585 [sender.py:send_request():402] send_request: defer
+2023-06-11 11:12:21,295 INFO    SenderThread:73585 [sender.py:send_request_defer():622] handle sender defer: 14
+2023-06-11 11:12:21,295 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: poll_exit
+2023-06-11 11:12:21,296 DEBUG   SenderThread:73585 [sender.py:send_request():402] send_request: poll_exit
+2023-06-11 11:12:21,296 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: poll_exit
+2023-06-11 11:12:21,296 DEBUG   SenderThread:73585 [sender.py:send_request():402] send_request: poll_exit
+2023-06-11 11:12:21,296 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: server_info
+2023-06-11 11:12:21,296 DEBUG   SenderThread:73585 [sender.py:send_request():402] send_request: server_info
+2023-06-11 11:12:21,298 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: get_summary
+2023-06-11 11:12:21,298 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: sampled_history
+2023-06-11 11:12:21,427 INFO    MainThread:73585 [wandb_run.py:_footer_history_summary_info():3469] rendering history
+2023-06-11 11:12:21,428 INFO    MainThread:73585 [wandb_run.py:_footer_history_summary_info():3501] rendering summary
+2023-06-11 11:12:21,428 INFO    MainThread:73585 [wandb_run.py:_footer_sync_info():3428] logging synced files
+2023-06-11 11:12:21,428 DEBUG   HandlerThread:73585 [handler.py:handle_request():144] handle_request: shutdown
+2023-06-11 11:12:21,428 INFO    HandlerThread:73585 [handler.py:finish():842] shutting down handler
+2023-06-11 11:12:22,302 INFO    WriterThread:73585 [datastore.py:close():298] close: /Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/wandb/run-20230611_111116-rvrcdgfn/run-rvrcdgfn.wandb
+2023-06-11 11:12:22,432 INFO    SenderThread:73585 [sender.py:finish():1550] shutting down sender
+2023-06-11 11:12:22,433 INFO    SenderThread:73585 [file_pusher.py:finish():167] shutting down file pusher
+2023-06-11 11:12:22,433 INFO    SenderThread:73585 [file_pusher.py:join():172] waiting for file pusher

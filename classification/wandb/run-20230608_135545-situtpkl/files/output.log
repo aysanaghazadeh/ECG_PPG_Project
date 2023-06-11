@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/main.py", line 7, in <module>
+    config = Config()
+  File "/Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/src/config.py", line 150, in __init__
+    self.models_path = args.path_to_models
+AttributeError: 'Namespace' object has no attribute 'path_to_models'

@@ -1,0 +1,52 @@
+2023-06-10 23:15:07,266 INFO    StreamThr :71573 [internal.py:wandb_internal():86] W&B internal server running at pid: 71573, started at: 2023-06-10 23:15:07.266358
+2023-06-10 23:15:07,268 DEBUG   HandlerThread:71573 [handler.py:handle_request():144] handle_request: status
+2023-06-10 23:15:07,276 INFO    WriterThread:71573 [datastore.py:open_for_write():85] open: /Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/wandb/run-20230610_231507-1upflh28/run-1upflh28.wandb
+2023-06-10 23:15:07,276 DEBUG   SenderThread:71573 [sender.py:send():375] send: header
+2023-06-10 23:15:07,276 DEBUG   SenderThread:71573 [sender.py:send():375] send: run
+2023-06-10 23:15:07,922 INFO    SenderThread:71573 [dir_watcher.py:__init__():219] watching files in: /Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/wandb/run-20230610_231507-1upflh28/files
+2023-06-10 23:15:07,922 INFO    SenderThread:71573 [sender.py:_start_run_threads():1124] run started: 1upflh28 with start time 1686453307.267126
+2023-06-10 23:15:07,922 DEBUG   SenderThread:71573 [sender.py:send_request():402] send_request: summary_record
+2023-06-10 23:15:07,923 INFO    SenderThread:71573 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-06-10 23:15:07,925 DEBUG   HandlerThread:71573 [handler.py:handle_request():144] handle_request: check_version
+2023-06-10 23:15:07,926 DEBUG   SenderThread:71573 [sender.py:send_request():402] send_request: check_version
+2023-06-10 23:15:08,103 DEBUG   HandlerThread:71573 [handler.py:handle_request():144] handle_request: run_start
+2023-06-10 23:15:08,123 DEBUG   HandlerThread:71573 [system_info.py:__init__():31] System info init
+2023-06-10 23:15:08,124 DEBUG   HandlerThread:71573 [system_info.py:__init__():46] System info init done
+2023-06-10 23:15:08,124 INFO    HandlerThread:71573 [system_monitor.py:start():181] Starting system monitor
+2023-06-10 23:15:08,125 INFO    SystemMonitor:71573 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-06-10 23:15:08,125 INFO    HandlerThread:71573 [system_monitor.py:probe():201] Collecting system info
+2023-06-10 23:15:08,127 DEBUG   HandlerThread:71573 [system_info.py:probe():195] Probing system
+2023-06-10 23:15:08,127 INFO    SystemMonitor:71573 [interfaces.py:start():190] Started cpu monitoring
+2023-06-10 23:15:08,128 INFO    SystemMonitor:71573 [interfaces.py:start():190] Started disk monitoring
+2023-06-10 23:15:08,129 INFO    SystemMonitor:71573 [interfaces.py:start():190] Started memory monitoring
+2023-06-10 23:15:08,130 INFO    SystemMonitor:71573 [interfaces.py:start():190] Started network monitoring
+2023-06-10 23:15:08,146 DEBUG   HandlerThread:71573 [git.py:repo():40] git repository is invalid
+2023-06-10 23:15:08,146 DEBUG   HandlerThread:71573 [system_info.py:probe():240] Probing system done
+2023-06-10 23:15:08,146 DEBUG   HandlerThread:71573 [system_monitor.py:probe():210] {'os': 'macOS-10.16-x86_64-i386-64bit', 'python': '3.9.16', 'heartbeatAt': '2023-06-11T03:15:08.127380', 'startedAt': '2023-06-11T03:15:07.253706', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/main.py', 'codePath': 'main.py', 'host': 'Aysans-MacBook-Pro-2.local', 'username': 'aysanaghazadeh', 'executable': '/Users/aysanaghazadeh/opt/anaconda3/envs/ECG_PPG_project/bin/python', 'cpu_count': 8, 'cpu_count_logical': 8, 'cpu_freq': {'current': 2400, 'min': 2400, 'max': 2400}, 'cpu_freq_per_core': [{'current': 2400, 'min': 2400, 'max': 2400}], 'disk': {'total': 460.4317207336426, 'used': 11.979625701904297}, 'memory': {'total': 16.0}}
+2023-06-10 23:15:08,146 INFO    HandlerThread:71573 [system_monitor.py:probe():211] Finished collecting system info
+2023-06-10 23:15:08,146 INFO    HandlerThread:71573 [system_monitor.py:probe():214] Publishing system info
+2023-06-10 23:15:08,146 DEBUG   HandlerThread:71573 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-06-10 23:15:08,148 DEBUG   HandlerThread:71573 [system_info.py:_save_pip():67] Saving pip packages done
+2023-06-10 23:15:08,148 DEBUG   HandlerThread:71573 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-06-10 23:15:08,933 INFO    Thread-17 :71573 [dir_watcher.py:_on_file_created():278] file/dir created: /Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/wandb/run-20230610_231507-1upflh28/files/conda-environment.yaml
+2023-06-10 23:15:08,933 INFO    Thread-17 :71573 [dir_watcher.py:_on_file_created():278] file/dir created: /Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/wandb/run-20230610_231507-1upflh28/files/requirements.txt
+2023-06-10 23:15:08,933 INFO    Thread-17 :71573 [dir_watcher.py:_on_file_created():278] file/dir created: /Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/wandb/run-20230610_231507-1upflh28/files/wandb-summary.json
+2023-06-10 23:15:09,672 DEBUG   HandlerThread:71573 [system_info.py:_save_conda():86] Saving conda packages done
+2023-06-10 23:15:09,673 INFO    HandlerThread:71573 [system_monitor.py:probe():216] Finished publishing system info
+2023-06-10 23:15:09,678 DEBUG   SenderThread:71573 [sender.py:send():375] send: files
+2023-06-10 23:15:09,678 INFO    SenderThread:71573 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-06-10 23:15:09,688 DEBUG   HandlerThread:71573 [handler.py:handle_request():144] handle_request: stop_status
+2023-06-10 23:15:09,688 DEBUG   SenderThread:71573 [sender.py:send_request():402] send_request: stop_status
+2023-06-10 23:15:09,885 DEBUG   SenderThread:71573 [sender.py:send():375] send: telemetry
+2023-06-10 23:15:09,932 INFO    Thread-17 :71573 [dir_watcher.py:_on_file_modified():295] file/dir modified: /Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/wandb/run-20230610_231507-1upflh28/files/conda-environment.yaml
+2023-06-10 23:15:09,933 INFO    Thread-17 :71573 [dir_watcher.py:_on_file_created():278] file/dir created: /Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/wandb/run-20230610_231507-1upflh28/files/wandb-metadata.json
+2023-06-10 23:15:10,108 INFO    wandb-upload_0:71573 [upload_job.py:push():137] Uploaded file /var/folders/1t/6l04b1413h7_m7f246431wmc0000gn/T/tmp_o5opvxjwandb/nh99vsq8-wandb-metadata.json
+2023-06-10 23:15:10,934 INFO    Thread-17 :71573 [dir_watcher.py:_on_file_created():278] file/dir created: /Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/wandb/run-20230610_231507-1upflh28/files/output.log
+2023-06-10 23:15:12,444 DEBUG   HandlerThread:71573 [handler.py:handle_request():144] handle_request: status_report
+2023-06-10 23:15:12,938 INFO    Thread-17 :71573 [dir_watcher.py:_on_file_modified():295] file/dir modified: /Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/wandb/run-20230610_231507-1upflh28/files/output.log
+2023-06-10 23:15:17,464 DEBUG   HandlerThread:71573 [handler.py:handle_request():144] handle_request: status_report
+2023-06-10 23:15:22,481 DEBUG   HandlerThread:71573 [handler.py:handle_request():144] handle_request: status_report
+2023-06-10 23:15:24,691 DEBUG   HandlerThread:71573 [handler.py:handle_request():144] handle_request: stop_status
+2023-06-10 23:15:24,692 DEBUG   SenderThread:71573 [sender.py:send_request():402] send_request: stop_status
+2023-06-10 23:15:28,288 DEBUG   HandlerThread:71573 [handler.py:handle_request():144] handle_request: status_report
+2023-06-10 23:15:33,309 DEBUG   HandlerThread:71573 [handler.py:handle_request():144] handle_request: status_report
