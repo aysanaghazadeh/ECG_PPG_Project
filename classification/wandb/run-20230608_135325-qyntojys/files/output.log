@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "/Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/main.py", line 2, in <module>
-    from src.model import Model
-  File "/Users/aysanaghazadeh/University/Pitt/Research/Milos/wave_form_data/ECG_PPG_project/classification/src/model.py", line 1, in <module>
-    from unet import UNet
-ModuleNotFoundError: No module named 'unet'
