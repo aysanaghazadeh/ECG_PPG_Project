@@ -18,9 +18,11 @@ class Train_UNet(nn.Module):
         scheduler = ExponentialLR(optimizer, gamma=self.config.scheduler_gamma)
         start_time = time.time()
         model.double()
+        model = model.to(device=self.config.device)
         for epoch in tqdm(range(self.epochs)):
             model.train()
             total_loss = 0
+            print(len(train_loader))
             for (i, (ecg, label)) in enumerate(train_loader):
                 ecg, label = ecg.double().to(device=self.config.device), label.double().to(device=self.config.device)
                 prediction = model(ecg)
