@@ -9,12 +9,12 @@ class Hubert(nn.Module):
         self.feature_extractor = AutoFeatureExtractor.from_pretrained("superb/hubert-base-superb-ks")
         self.model = HubertForSequenceClassification.from_pretrained("superb/hubert-base-superb-ks")
         self.model.config.mask_time_length = 2
-        self.classifier = Linear(self.config.num_attention_heads, 1)
+        self.classifier = Linear(self.model.config.num_attention_heads, 1)
 
     def forward(self, x):
         x = x.squeeze().numpy()
         inputs = self.feature_extractor(x, return_tensors="pt")
         logits = self.model(**inputs).logits
         output = self.classifier(logits)
-        return output
+        return output.squeeze()
 
