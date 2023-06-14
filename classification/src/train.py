@@ -60,16 +60,7 @@ class Train_Huber(nn.Module):
             print(len(train_loader))
             for (i, (ecg, label)) in enumerate(train_loader):
                 ecg, label = ecg.float().to(device=self.config.device), label.float().to(device=self.config.device)
-                # prediction = model(ecg)
-                feature_extractor = AutoFeatureExtractor.from_pretrained("superb/hubert-base-superb-ks")
-                model = HubertForSequenceClassification.from_pretrained("superb/hubert-base-superb-ks")
-                model.train()
-                model.config.mask_time_length = 2
-                x = ecg.squeeze().numpy()
-                inputs = feature_extractor(x, return_tensors="pt")
-                logits = model(**inputs).logits
-                prediction = logits[:,0]
-                print(logits)
+                prediction = model(ecg)
                 loss = loss_function(prediction, label)
                 optimizer.zero_grad()
                 loss.backward()
