@@ -6,22 +6,24 @@ import wandb
 
 DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 DATASET = 'ptb'
-MODEL = 'U_Net'
+MODEL = 'generative'
 PATH_TO_DATA = '../data'
 DATASET_FOLDER = 'ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.3'
 PATH_TO_MODELS = './models'
 PATH_TO_REPORTS = './reports'
 PATH_TO_RESULTS = './results'
 TEST_SIZE = 0.2
-LEARNING_RATE = 1e-5
+LEARNING_RATE = 1e-1
 MOMENTUM = 9e-1
 OPTIMIZER = 'SGD'
-LOSS = 'BCE'
+LOSS = 'MSE'
 NUM_CLASSES = 2
 BATCH_SIZE = 8
-NUM_EPOCHS = 1000
+NUM_EPOCHS = 10000
 SAMPLING_RATE = 100
-SCHEDULER_GAMMA = 0.9
+SCHEDULER_GAMMA = 0.8
+INPUT_SIZE = 500
+OUTPUT_SIZE = 500
 
 
 def parse_args(arguments=None):
@@ -116,6 +118,16 @@ def parse_args(arguments=None):
         default=SCHEDULER_GAMMA,
         help="value of gamma for exponential lr scheduler"
     )
+    parser.add_argument(
+        "-is", "--input_size",
+        default=INPUT_SIZE,
+        help="the size of the input to the model"
+    )
+    parser.add_argument(
+        "-os", "--output_size",
+        default=OUTPUT_SIZE,
+        help="the size of the output to the model"
+    )
     args = parser.parse_args(arguments)
     return args
 
@@ -145,13 +157,15 @@ class Config:
         self.batch_size = args.batch_size
         self.sampling_rate = args.sampling_rate
         self.scheduler_gamma = args.scheduler_gamma
+        self.input_size = args.input_size
+        self.output_size = args.output_size
 
         wandb.init(
             # set the wandb project where this run will be logged
             project="ecg_classification",
 
             #  set the run name
-            name=''.join([self.dataset, '_', self.model, '_', str(self.num_epochs),
+            name=''.join([self.dataset, '_', self.model, '_', str(self.batch_size),
                           '_', str(self.lr) + '_', self.loss, '_', self.optimizer]),
 
             # track hyperparameters and run metadata
@@ -161,7 +175,8 @@ class Config:
                 "epochs": self.num_epochs,
                 "loss": self.loss,
                 "lr": self.lr,
-                "optimizer": self.optimizer
+                "optimizer": self.optimizer,
+                "batch size": self.batch_size
             }
         )
 

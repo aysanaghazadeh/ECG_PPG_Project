@@ -1,4 +1,5 @@
 from .unet import UNet
+from .hubert import *
 from .generative import *
 from torch import nn
 from .config import Config
@@ -10,7 +11,8 @@ class Model(nn.Module):
         self.config = config
         self.models = {
             'U_Net': UNet,
-            'hubert': Hubert
+            'hubert': Hubert,
+            'generative': TransformerModel
         }
         self.model = self.models[self.config.model](self.config)
 

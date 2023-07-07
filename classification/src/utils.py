@@ -20,10 +20,10 @@ def prepare_ptb_dataset(config: Config):
 
     y = [0 if 'NORM' in l else 1 for l in label.scp_codes]
     X_train, X_test, y_train, y_test = train_test_split(record_paths, y, test_size=config.test_size)
-    train_set = PTBDataset(X_train, y_train)
-    test_set = PTBDataset(X_test, y_test)
+    train_set = PTBDataset(X_train, y_train, config)
+    test_set = PTBDataset(X_test, y_test, config)
     train_loader = DataLoader(train_set, shuffle=True, batch_size=config.batch_size, num_workers=os.cpu_count())
-    test_loader = DataLoader(test_set, shuffle=False, batch_size=1, num_workers=os.cpu_count())
+    test_loader = DataLoader(test_set, shuffle=False, batch_size=8, num_workers=os.cpu_count())
     return train_loader, test_loader
 
 
@@ -33,5 +33,3 @@ def prepare_dataset(config: Config):
     }
     dataset = datasets[config.dataset]
     return dataset(config)
-
-

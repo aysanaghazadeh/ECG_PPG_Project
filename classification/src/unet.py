@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from torch.nn import Conv1d, ConvTranspose1d, MaxPool1d, ReLU, Linear
+from torch.nn import Conv1d, ConvTranspose1d, MaxPool1d, ReLU, Linear, BatchNorm1d
 from torch.nn import functional as F
 from torchvision.transforms import CenterCrop
 
@@ -11,11 +11,14 @@ class Block(nn.Module):
         self.conv1 = Conv1d(in_channels=in_channels, out_channels=out_channels, kernel_size=3, padding=1, bias=False)
         self.conv2 = Conv1d(in_channels=out_channels, out_channels=out_channels, kernel_size=3, padding=1, bias=False)
         self.ReLU = ReLU()
+        self.batch_norm = BatchNorm1d(out_channels)
 
     def forward(self, x):
         conv1_output = self.conv1(x)
+        conv1_output = self.batch_norm(conv1_output)
         conv2_input = self.ReLU(conv1_output)
         conv2_output = self.conv2(conv2_input)
+        conv2_output = self.batch_norm(conv2_output)
         output = self.ReLU(conv2_output)
         return output
 

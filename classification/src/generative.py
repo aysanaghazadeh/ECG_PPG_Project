@@ -1,20 +1,54 @@
-from transformers import AutoFeatureExtractor, HubertForSequenceClassification
+import torch
+from torch.nn import Transformer, Embedding, Linear
 import torch.nn as nn
-from torch.nn import Linear
+from .unet import UNet
 
 
-class Hubert(nn.Module):
+class TransformerModel(nn.Module):
     def __init__(self, config):
-        super(Hubert, self).__init__()
-        self.feature_extractor = AutoFeatureExtractor.from_pretrained("superb/hubert-base-superb-ks")
-        self.model = HubertForSequenceClassification.from_pretrained("superb/hubert-base-superb-ks")
-        self.model.config.mask_time_length = 2
-        self.classifier = Linear(self.model.config.num_attention_heads, 1)
+        super(TransformerModel, self).__init__()
+        self.config = config
+        self.linear_in = nn.Linear(self.config.input_size, 256)
+        self.transformer = Transformer(
+            d_model=256,
+            nhead=8,
+            num_encoder_layers=4,
+            num_decoder_layers=4,
+            dim_feedforward=256,
+            dropout=0.2
+        )
+        self.fc = Linear(256, self.config.output_size)
 
     def forward(self, x):
-        x = x.squeeze().numpy()
-        inputs = self.feature_extractor(x, return_tensors="pt")
-        logits = self.model(**inputs).logits
-        output = self.classifier(logits)
-        return output.squeeze()
+        x = self.linear_in(x)
+        x = x.permute(1, 0, 2)  # Reshape to (sequence_length, batch_size, hidden_size)
+        output = self.transformer(x, x)
+        output = output.permute(1, 0, 2)  # Reshape back to (batch_size, sequence_length, hidden_size)
+        output = self.fc(output)
+        return output
 
+
+class TransformerModelWithUNetBackbone(nn.Module):
+    def __init__(self, config):
+        super(TransformerModel, self).__init__()
+        self.config = config
+        self.unet = UNet(config)
+        self.embedding = Embedding(self.config.input_size, 256)
+        self.transformer = Transformer(
+            d_model=256,
+            nhead=8,
+            num_encoder_layers=4,
+            num_decoder_layers=4,
+            dim_feedforward=256,
+            dropout=0.2
+        )
+        self.fc = Linear(256, self.config.output_size)
+
+    def forward(self, x):
+        x = self.unet(x)
+        x = self.embedding(x)
+        x = x.permute(1, 0, 2)  # Reshape to (sequence_length, batch_size, hidden_size)
+        output = self.transformer(x, x)
+        output = output.permute(1, 0, 2)  # Reshape back to (batch_size, sequence_length, hidden_size)
+        output = self.fc(output)
+        return output
