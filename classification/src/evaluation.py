@@ -13,37 +13,38 @@ class Evaluation(nn.Module):
         self.auc = AUC(device=self.config.device)
 
     def get_accuracy(self, prediction, target):
-        prediction = torch.softmax(prediction, dim=0)
+        prediction = torch.stack(prediction)
+        target = torch.stack(target)
+        prediction = torch.sigmoid(prediction)
         prediction = prediction >= 0.5
-        self.accuracy.reset()
-        self.accuracy.update(prediction, target)
-        return self.accuracy.compute()
+        intersection = prediction == target
+        accuracy = torch.sum(intersection) / (len(prediction) * self.config.num_classes)
+        return accuracy
 
-    def get_precision(self, prediction, target):
-        prediction = torch.softmax(prediction, dim=0)
+    @staticmethod
+    def get_precision(prediction, target):
+        prediction = torch.stack(prediction)
+        target = torch.stack(target)
+        prediction = torch.sigmoid(prediction)
         prediction = prediction >= 0.5
-        self.precision.reset()
-        self.precision.update(prediction.int(), target.int())
-        return self.precision.compute()
+        intersection = (prediction == 1) & (target == 1)
+        precision = (torch.sum(intersection) + 1) / (torch.sum(prediction) + 1)
+        return precision
 
-    def get_recall(self, prediction, target):
-        prediction = torch.softmax(prediction, dim=0)
+    @staticmethod
+    def get_recall(prediction, target):
+        prediction = torch.stack(prediction)
+        target = torch.stack(target)
+        prediction = torch.sigmoid(prediction)
         prediction = prediction >= 0.5
-        self.recall.reset()
-        self.recall.update(prediction.int(), target.int())
-        return self.recall.compute()
-
-    def get_auc(self, prediction, target):
-        prediction = torch.softmax(prediction, dim=0)
-        self.auc.reset()
-        self.auc.update(prediction, target)
-        return self.auc.compute()
+        intersection = (prediction == 1) & (target == 1)
+        recall = (torch.sum(intersection) + 1) / (torch.sum(target) + 1)
+        return recall
 
     def forward(self, prediction, target):
         results = {
             'accuracy': self.get_accuracy(prediction, target),
             'precision': self.get_precision(prediction, target),
-            'recall': self.get_recall(prediction, target),
-            'auc': self.get_auc(prediction, target)
+            'recall': self.get_recall(prediction, target)
         }
         return results

@@ -6,25 +6,26 @@ import wandb
 
 DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 DATASET = 'ptb'
-MODEL = 'generative'
+MODEL = 'U_Net_2D'
 PATH_TO_DATA = '../data'
 DATASET_FOLDER = 'ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.3'
 PATH_TO_MODELS = './models'
 PATH_TO_REPORTS = './reports'
 PATH_TO_RESULTS = './results'
 TEST_SIZE = 0.2
-LEARNING_RATE = 1e-1
+LEARNING_RATE = 2e-1
 MOMENTUM = 9e-1
-OPTIMIZER = 'SGD'
-LOSS = 'MSE'
-NUM_CLASSES = 2
+OPTIMIZER = 'Adam'
+LOSS = 'BCE'
+NUM_CLASSES = 5
 BATCH_SIZE = 8
 NUM_EPOCHS = 10000
 SAMPLING_RATE = 100
-SCHEDULER_GAMMA = 0.8
+SCHEDULER_GAMMA = 0.98
 INPUT_SIZE = 500
 OUTPUT_SIZE = 500
-
+NUM_LEADS = 12
+DATA_READ = 'memory'
 
 def parse_args(arguments=None):
     parser = argparse.ArgumentParser(description="Medical Signal Classification task")
@@ -128,6 +129,16 @@ def parse_args(arguments=None):
         default=OUTPUT_SIZE,
         help="the size of the output to the model"
     )
+    parser.add_argument(
+        "-nl", "--num_leads",
+        default=NUM_LEADS,
+        help="number of leads in the dataset"
+    )
+    parser.add_argument(
+        "-dr", "--data_read",
+        default=DATA_READ,
+        help="choose if you want to keep data in hard or memory"
+    )
     args = parser.parse_args(arguments)
     return args
 
@@ -143,6 +154,7 @@ class Config:
         self.path_to_dataset = args.path_to_dataset
         self.models_path = args.path_to_models
         os.makedirs(self.models_path, exist_ok=True)
+        os.makedirs(os.path.join(self.models_path, self.model), exist_ok=True)
         self.reports_path = args.path_to_reports
         os.makedirs(self.reports_path, exist_ok=True)
         self.results_path = args.path_to_results
@@ -159,6 +171,8 @@ class Config:
         self.scheduler_gamma = args.scheduler_gamma
         self.input_size = args.input_size
         self.output_size = args.output_size
+        self.num_leads = args.num_leads
+        self.data_read = args.data_read
 
         wandb.init(
             # set the wandb project where this run will be logged

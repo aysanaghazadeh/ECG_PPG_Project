@@ -5,6 +5,13 @@ import os
 import pandas as pd
 import ast
 from torch.utils.data import DataLoader
+import wfdb
+
+
+def read_signal_file(file_path):
+    x, _ = wfdb.rdsamp(file_path)
+    x = torch.from_numpy(x.astype(np.double))
+    return x
 
 
 def prepare_ptb_dataset(config: Config):
@@ -17,9 +24,10 @@ def prepare_ptb_dataset(config: Config):
         record_paths = [os.path.join(config.path_to_dataset, f) for f in label.filename_lr]
     else:
         record_paths = [config.path_to_dataset + f for f in label.filename_hr]
-
-    y = [0 if 'NORM' in l else 1 for l in label.scp_codes]
-    X_train, X_test, y_train, y_test = train_test_split(record_paths, y, test_size=config.test_size)
+    X = [read_signal_file(file_path) for file_path in record_paths] if config.data_read == 'memory' else record_paths
+    classes = ['NORM', 'MI', 'STTC', 'CD', 'HYP']
+    y = [[1 if c in l else 0 for c in classes] for l in label.scp_codes]
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=config.test_size)
     train_set = PTBDataset(X_train, y_train, config)
     test_set = PTBDataset(X_test, y_test, config)
     train_loader = DataLoader(train_set, shuffle=True, batch_size=config.batch_size, num_workers=os.cpu_count())

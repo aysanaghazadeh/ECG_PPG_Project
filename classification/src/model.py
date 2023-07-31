@@ -1,4 +1,5 @@
-from .unet import UNet
+from .unet import UNet, UNetWithMultiLeads
+from .unet_2D import *
 from .hubert import *
 from .generative import *
 from torch import nn
@@ -10,28 +11,12 @@ class Model(nn.Module):
         super(Model, self).__init__()
         self.config = config
         self.models = {
-            'U_Net': UNet,
+            'U_Net': UNetWithMultiLeads,
             'hubert': Hubert,
-            'generative': TransformerModel
+            'generative': TransformerModel,
+            'U_Net_2D': UNetWithMultiLeads2D
         }
         self.model = self.models[self.config.model](self.config)
 
     def forward(self, x):
         return self.model(x)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
